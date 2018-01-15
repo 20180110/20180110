@@ -1,0 +1,98 @@
+{include file="public/header" /}
+<!-- start: Header -->
+
+<div class="container-fluid-full">
+    <div class="row-fluid">
+
+        <!-- start: Main Menu -->
+        {include file="public/menu" /}
+        <!-- end: Main Menu -->
+
+        <noscript>
+            <div class="alert alert-block span10">
+                <h4 class="alert-heading">Warning!</h4>
+
+                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+                    enabled to use this site.</p>
+            </div>
+        </noscript>
+
+        <!-- start: Content -->
+        <div id="content" class="span10">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="icon-home"></i>
+                    <a href="index.html">主页</a>
+                </li>
+                <li>
+                    <i class="icon-angle-right"></i>
+                    <a href="#">报备</a>
+                </li>
+                <li>
+                    <i class="icon-angle-right"></i>
+                    <a href="#">列表</a>
+                </li>
+            </ul>
+            <table class="table table-bordered">
+                <form class="form-horizontal" method="post" action="" target="_self">
+                    <input type="text" placeholder="输入车牌" value="" class="input-text" style="width:120px" name="truckID">
+
+                    <select class="select" name="company" size="1" >
+                        <option value="" selected="">请选择公司</option>
+                        {volist name="company" id='vo'}
+                        <option value="{$vo.Id}" >{$vo.name}</option>
+                        {/volist}
+                    </select>
+                    <button type="submit" class="btn btn-success" id="" name="" style="margin-left: 10px" > 搜索</button>
+                </form>
+                <div><a href="{:url('admin/record/add')}" class="btn btn-primary">新增</a></div>
+                <thead>
+                <tr>
+                    <th>车牌</th>
+                    <th>所属货物属性</th>
+                    <th>所属介质名称</th>
+                    <th>通行方式</th>
+                    <th>通行路线</th>
+                    <th>报备开始时间</th>
+                    <th>联系电话</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {volist name='list' id='data'}
+                <tr>
+                    <td>{$data.truckID}</td>
+                    <td>{$data.goodskind}</td>
+                    <td>{$data.Medium}</td>
+                    <td>{$data.Throughmode}</td>
+                    <td>{$data.Route}</td>
+                    <td>{$data.startdate|date="Y-m-d",###}</td>
+                    <td>{$data.contact}</td>
+                    <td><a href="{:url('edit','id='.$data.Id)}">编辑</a>|<a href="{:url('del','id='.$data.Id)}">删除</a></td>
+                </tr>
+                {/volist}
+                </tbody>
+            </table>
+            <div class="pagination">{$list->render()}</div>
+        </div><!--/.fluid-container-->
+
+        <!-- end: Content -->
+    </div><!--/#content.span10-->
+</div><!--/fluid-row-->
+
+<div class="modal hide fade" id="myModal">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>Settings</h3>
+    </div>
+    <div class="modal-body">
+        <p>Here settings can be configured...</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Close</a>
+        <a href="#" class="btn btn-primary">Save changes</a>
+    </div>
+</div>
+{include file="public/foot" /}
+
+

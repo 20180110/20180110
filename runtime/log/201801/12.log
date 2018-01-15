@@ -1,0 +1,359 @@
+---------------------------------------------------------------
+[ 2018-01-12T11:08:30+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] lin.twothink.com/ [运行时间：0.848049s][吞吐率：1.18req/s] [内存消耗：1,657.23kb] [文件加载：48]
+[ info ] [ LANG ] D:\WWW\20180110\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8939834368',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.108 Safari/537.36 2345Explorer/8.8.3.16721',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => 'lin.twothink.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\20180110\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [2]mkdir(): No such file or directory[D:\WWW\20180110\application\index\controller\Index.php:16]
+---------------------------------------------------------------
+[ 2018-01-12T11:08:32+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ info ] lin.twothink.com/favicon.ico [运行时间：0.108005s][吞吐率：9.26req/s] [内存消耗：1,365.59kb] [文件加载：40]
+[ info ] [ LANG ] D:\WWW\20180110\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8939834368',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lin.twothink.com/',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.108 Safari/537.36 2345Explorer/8.8.3.16721',
+  'connection' => 'keep-alive',
+  'host' => 'lin.twothink.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-12T11:09:15+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] lin.twothink.com/ [运行时间：0.575033s][吞吐率：1.74req/s] [内存消耗：1,657.45kb] [文件加载：48]
+[ info ] [ LANG ] D:\WWW\20180110\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8939834368',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.108 Safari/537.36 2345Explorer/8.8.3.16721',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'lin.twothink.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\20180110\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [2]mkdir(): No such file or directory[D:\WWW\20180110\application\index\controller\Index.php:16]
+---------------------------------------------------------------
+[ 2018-01-12T11:10:41+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] lin.twothink.com/ [运行时间：0.133008s][吞吐率：7.52req/s] [内存消耗：1,657.88kb] [文件加载：48]
+[ info ] [ LANG ] D:\WWW\20180110\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8939834368',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.108 Safari/537.36 2345Explorer/8.8.3.16721',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'lin.twothink.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\20180110\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [2]mkdir(): No such file or directory[D:\WWW\20180110\application\index\controller\Index.php:16]
+---------------------------------------------------------------
+[ 2018-01-12T11:11:18+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] lin.twothink.com/ [运行时间：0.136008s][吞吐率：7.35req/s] [内存消耗：1,657.34kb] [文件加载：48]
+[ info ] [ LANG ] D:\WWW\20180110\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8939834368',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.108 Safari/537.36 2345Explorer/8.8.3.16721',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'lin.twothink.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\20180110\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: base64_image_content[D:\WWW\20180110\application\index\controller\Index.php:19]
+---------------------------------------------------------------
+[ 2018-01-12T11:11:35+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] lin.twothink.com/ [运行时间：0.389022s][吞吐率：2.57req/s] [内存消耗：1,768.62kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\20180110\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8939834368',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.108 Safari/537.36 2345Explorer/8.8.3.16721',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'lin.twothink.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\20180110\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\20180110\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-12T11:11:35+08:00 ] 127.0.0.1 127.0.0.1 GET /static/umeditor/themes/default/css/umeditor.css
+[ info ] lin.twothink.com/static/umeditor/themes/default/css/umeditor.css [运行时间：0.117006s][吞吐率：8.55req/s] [内存消耗：1,366.39kb] [文件加载：40]
+[ info ] [ LANG ] D:\WWW\20180110\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'umeditor',
+    2 => 'themes',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8939834368',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lin.twothink.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.108 Safari/537.36 2345Explorer/8.8.3.16721',
+  'accept' => 'text/css,*/*;q=0.1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'lin.twothink.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'default' => 'css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-12T11:11:35+08:00 ] 127.0.0.1 127.0.0.1 GET /static/umeditor/third-party/jquery.min.js
+[ info ] lin.twothink.com/static/umeditor/third-party/jquery.min.js [运行时间：0.213012s][吞吐率：4.69req/s] [内存消耗：1,365.95kb] [文件加载：40]
+[ info ] [ LANG ] D:\WWW\20180110\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'umeditor',
+    2 => 'third-party',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8939834368',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lin.twothink.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.108 Safari/537.36 2345Explorer/8.8.3.16721',
+  'accept' => '*/*',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'lin.twothink.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-12T11:11:35+08:00 ] 127.0.0.1 127.0.0.1 GET /static/umeditor/third-party/template.min.js
+[ info ] lin.twothink.com/static/umeditor/third-party/template.min.js [运行时间：0.099006s][吞吐率：10.10req/s] [内存消耗：1,365.95kb] [文件加载：40]
+[ info ] [ LANG ] D:\WWW\20180110\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'umeditor',
+    2 => 'third-party',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8939834368',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lin.twothink.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.108 Safari/537.36 2345Explorer/8.8.3.16721',
+  'accept' => '*/*',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'lin.twothink.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-12T11:11:35+08:00 ] 127.0.0.1 127.0.0.1 GET /static/umeditor/umeditor.config.js
+[ info ] lin.twothink.com/static/umeditor/umeditor.config.js [运行时间：0.098006s][吞吐率：10.20req/s] [内存消耗：1,365.95kb] [文件加载：40]
+[ info ] [ LANG ] D:\WWW\20180110\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'umeditor',
+    2 => 'umeditor.config.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8939834368',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lin.twothink.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.108 Safari/537.36 2345Explorer/8.8.3.16721',
+  'accept' => '*/*',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'lin.twothink.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-12T11:11:35+08:00 ] 127.0.0.1 127.0.0.1 GET /static/umeditor/umeditor.min.js
+[ info ] lin.twothink.com/static/umeditor/umeditor.min.js [运行时间：0.075004s][吞吐率：13.33req/s] [内存消耗：1,365.91kb] [文件加载：40]
+[ info ] [ LANG ] D:\WWW\20180110\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'umeditor',
+    2 => 'umeditor.min.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8939834368',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lin.twothink.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.108 Safari/537.36 2345Explorer/8.8.3.16721',
+  'accept' => '*/*',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'lin.twothink.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-12T11:11:36+08:00 ] 127.0.0.1 127.0.0.1 GET /static/umeditor/lang/zh-cn/zh-cn.js
+[ info ] lin.twothink.com/static/umeditor/lang/zh-cn/zh-cn.js [运行时间：0.076005s][吞吐率：13.16req/s] [内存消耗：1,366.26kb] [文件加载：40]
+[ info ] [ LANG ] D:\WWW\20180110\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'umeditor',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8939834368',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lin.twothink.com/',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.108 Safari/537.36 2345Explorer/8.8.3.16721',
+  'accept' => '*/*',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'lin.twothink.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'cn' => 'zh-cn.js',
+)
+[ info ] [ LOG ] INIT File
