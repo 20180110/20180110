@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"D:\WWW\20180110\public/../application/admin\view\record\edit.html";i:1515572010;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1515569666;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1515555601;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"D:\WWW\20180110\public/../application/admin\view\record\edit.html";i:1515572010;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1515579356;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1515555601;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -342,9 +342,9 @@
             <li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet">动态管控</span></a></li>
             <li><a href="table.html"><i class="icon-align-justify"></i><span class="hidden-tablet">统计分析</span></a></li>
             <li><a href="<?php echo url('admin/record/dataList'); ?>"><i class="icon-edit"></i><span class="hidden-tablet">报备录入</span></a></li>
-            <li><a href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet">企业录入</span></a></li>
-            <li><a href="#"><i class="icon-tasks"></i><span class="hidden-tablet">车辆录入</span></a></li>
-            <li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet">人员录入</span></a></li>
+            <li><a href="<?php echo url('admin/company/dataList'); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet">企业录入</span></a></li>
+            <li><a href="<?php echo url('admin/truck/dataList'); ?>"><i class="icon-tasks"></i><span class="hidden-tablet">车辆录入</span></a></li>
+            <li><a href="<?php echo url('admin/person/dataList'); ?>"><i class="icon-eye-open"></i><span class="hidden-tablet">人员录入</span></a></li>
 
         </ul>
     </div>

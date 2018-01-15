@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:66:"D:\WWW\20180110\public/../application/admin\view\company\edit.html";i:1515575416;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1515579356;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1515555601;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"D:\WWW\20180110\public/../application/admin\view\index\index.html";i:1515556112;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1515579356;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1515555601;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -328,13 +328,13 @@
         </div>
     </div>
 </div>
-<!-- start: Header -->
-
-<div class="container-fluid-full">
-    <div class="row-fluid">
-
-        <!-- start: Main Menu -->
-        <div id="sidebar-left" class="span2">
+	<!-- start: Header -->
+	
+		<div class="container-fluid-full">
+		<div class="row-fluid">
+				
+			<!-- start: Main Menu -->
+			<div id="sidebar-left" class="span2">
     <div class="nav-collapse sidebar-nav">
         <ul class="nav nav-tabs nav-stacked main-menu">
             <li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-tablet">主页</span></a></li>
@@ -349,169 +349,159 @@
         </ul>
     </div>
 </div>
-        <!-- end: Main Menu -->
+			<!-- end: Main Menu -->
+			
+			<noscript>
+				<div class="alert alert-block span10">
+					<h4 class="alert-heading">Warning!</h4>
+					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+				</div>
+			</noscript>
+			
+			<!-- start: Content -->
+			<div id="content" class="span10">
+			
+			
+			<ul class="breadcrumb">
+				<li>
+					<i class="icon-home"></i>
+					<a href="index.html">主页</a>
+					<i class="icon-angle-right"></i> 
+				</li>
+				<li>
+					<i class="icon-edit"></i>
+					<a href="#">报备录入</a>
+				</li>
+			</ul>
+			
+			<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header" data-original-title>
+						<h2><i class="halflings-icon white edit"></i><span class="break"></span>报备信息录入 </h2>
+						<div class="box-icon">
+							<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
+							<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
+							<a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<form class="form-horizontal" method="post">
+						  <fieldset>
+							<div class="control-group">
+							  <label class="control-label" for="typeahead">车牌</label>
+							  <div class="controls">
+							    <p class="help-block">可以根据报备历史信息，提示下拉列表选择输入。</p>
+								<input type="text" class="span6 typeahead" id="typeahead"  data-provide="typeahead" data-items="4" data-source=''>
+							  </div>
+							</div>
+							<div class="control-group">
+							  <label class="control-label" for="typeahead">所属货物属性</label>
+							  <div class="controls">
+								<input type="text" class="span6 typeahead" id="typeahead"  data-provide="typeahead" data-items="4" data-source=''>
+								
+							  </div>
+						  </div>
+							<div class="control-group">
+							  <label class="control-label" for="typeahead">所属介质名称</label>
+							  <div class="controls">
+								<input type="text" class="span6 typeahead" id="typeahead"  data-provide="typeahead" data-items="4" data-source=''>
+								
+							  </div>
+						  </div>
+						  <div class="control-group">
+							  <label class="control-label" for="typeahead">通行方式</label>
+							  <div class="controls">
+								<input type="text" class="span6 typeahead" id="typeahead"  data-provide="typeahead" data-items="4" data-source=''>
+								
+							  </div>
+						  </div>
+							<div class="control-group">
+							  <label class="control-label" for="date01">报备开始时间</label>
+							  <div class="controls">
+							    <input name="text2" type="text" class="input-xlarge datepicker" id="date01" value="">
+							  </div>
+						  </div>
+ <div class="control-group">
+							  <label class="control-label" for="typeahead">通行路线</label>
+							  <div class="controls">
+							    <input name="text" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" data-source=''>
+							    
+			    </div>
+						  </div>
+						   <div class="control-group">
+							  <label class="control-label" for="typeahead">联系电话</label>
+							  <div class="controls">
+							    <input name="text" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" data-source=''>
+							    
+			    </div>
+						  </div>
+						   <div class="control-group">
+							  <label class="control-label" for="typeahead">通行路线</label>
+							  <div class="controls">
+							    <input name="text" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" data-source=''>
+							    
+			    </div>
+						  </div>
+						   <div class="control-group">
+							  <label class="control-label" for="typeahead">驾驶员</label>
+							  <div class="controls">
+							    <input name="text" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" data-source=''>
+							    
+			    </div>
+						  </div>
+						 <div class="control-group">
+							  <label class="control-label" for="typeahead">押运员</label>
+							  <div class="controls">
+							    <input name="text" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" data-source=''>
+							    
+			    </div>
+						  </div>
+						   <div class="control-group">
+							  <label class="control-label" for="typeahead">所属地域</label>
+							  <div class="controls">
+							    <input name="text" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" data-source=''>
+							    
+			    </div>
+						  </div>
+						   <div class="control-group">
+							  <label class="control-label" for="typeahead">所属企业</label>
+							  <div class="controls">
+							    <input name="text" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" data-source=''>
+							    
+			    </div>
+						  </div>
+							<div class="form-actions">
+							  <button type="submit" class="btn btn-primary">保存</button>
+							   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							  <button type="reset" class="btn">取消</button>
+							</div>
+						  </fieldset>
+						</form>   
 
-        <noscript>
-            <div class="alert alert-block span10">
-                <h4 class="alert-heading">Warning!</h4>
-                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
-            </div>
-        </noscript>
+					</div>
+				</div><!--/span-->
 
-        <!-- start: Content -->
-        <div id="content" class="span10">
-
-
-            <ul class="breadcrumb">
-                <li>
-                    <i class="icon-home"></i>
-                    <a href="index.html">主页</a>
-                    <i class="icon-angle-right"></i>
-                </li>
-                <li>
-                    <i class="icon-edit"></i>
-                    <a href="#">企业信息录入</a>
-                </li>
-            </ul>
-
-            <div class="row-fluid sortable">
-                <div class="box span12">
-                    <div class="box-header" data-original-title>
-                        <h2><i class="halflings-icon white edit"></i><span class="break"></span>企业信息录入 </h2>
-                        <div class="box-icon">
-                            <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
-                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-                        </div>
-                    </div>
-                    <div class="box-content">
-                        <form class="form-horizontal" method="post">
-                            <input type="hidden" name="Id" value="<?php echo $data['Id']; ?>">
-                            <fieldset>
-                                <div class="control-group">
-                                    <label class="control-label" for="typeahead">企业名称</label>
-                                    <div class="controls">
-                                        <input type="text" class="span6 typeahead" id="typeahead"  data-provide="typeahead" data-items="4" name="name" value="<?php echo $data['name']; ?>">
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="typeahead">企业地理位置</label>
-                                    <div class="controls">
-                                        <input type="text" class="span6 typeahead" id="typeahead"  data-provide="typeahead" data-items="4" name="address" value="<?php echo $data['address']; ?>">
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="typeahead">企业法人</label>
-                                    <div class="controls">
-                                        <input type="text" class="span6 typeahead" id="typeahead"  data-provide="typeahead" data-items="4" name="person" value="<?php echo $data['person']; ?>">
-
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="date01">企业创建日期</label>
-                                    <div class="controls">
-                                        <input name="creatdate" type="text" class="input-xlarge datepicker" id="date01" value="<?php echo date('Y-m-d',$data['creatdate']); ?>">
-                                    </div>
-                                </div>
-
-                                <div class="control-group">
-                                    <label class="control-label" for="typeahead">所属中队</label>
-                                    <div class="controls">
-                                        <input name="team" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" data-source='' value="<?php echo $data['team']; ?>">
-
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="typeahead">责任交警安全员</label>
-                                    <div class="controls">
-                                        <input name="Police" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" data-source='' value="<?php echo $data['Police']; ?>">
-
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="typeahead">企业联络人（安全员）</label>
-                                    <div class="controls">
-                                        <input name="Staff" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" value="<?php echo $data['Staff']; ?>">
-
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="typeahead">所属危险品运输车辆</label>
-                                    <div class="controls">
-                                        <input name="truck" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" value="<?php echo $data['truck']; ?>">
-
-                                    </div>
-                                </div>
-                                <div class="control-group">业务往来危险品运输车辆
-                                    <div class="controls">
-                                        <input name="RelationTruck" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" value="<?php echo $data['RelationTruck']; ?>">
-
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="typeahead">所属驾驶员</label>
-                                    <div class="controls">
-                                        <select class="select" name="driver" size="1" >
-                                            <option value="" selected="">请选择驾驶员</option>
-                                            <?php if(is_array($driver) || $driver instanceof \think\Collection || $driver instanceof \think\Paginator): $i = 0; $__LIST__ = $driver;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                            <option value="<?php echo $vo['Id']; ?>" <?php if($vo['Id'] == $data['driver']): ?>selected<?php endif; ?> ><?php echo $vo['name1']; ?></option>
-                                            <?php endforeach; endif; else: echo "" ;endif; ?>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="typeahead">所属押运员</label>
-                                    <div class="controls">
-                                        <input name="Escort" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" value="<?php echo $data['Escort']; ?>">
-
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="typeahead">企业经营范围</label>
-                                    <div class="controls">
-                                        <input name="Range" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" value="<?php echo $data['Range']; ?>">
-
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="typeahead">备注</label>
-                                    <div class="controls">
-                                        <textarea name="remark" id="" cols="100" rows="10"><?php echo $data['remark']; ?></textarea>
-
-                                    </div>
-                                </div>
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary">保存</button>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <button type="reset" class="btn">取消</button>
-                                </div>
-                            </fieldset>
-                        </form>
-
-                    </div>
-                </div><!--/span-->
-
-            </div><!--/row-->
-        </div><!--/.fluid-container-->
-
-        <!-- end: Content -->
-    </div><!--/#content.span10-->
-</div><!--/fluid-row-->
-
-<div class="modal hide fade" id="myModal">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h3>Settings</h3>
-    </div>
-    <div class="modal-body">
-        <p>Here settings can be configured...</p>
-    </div>
-    <div class="modal-footer">
-        <a href="#" class="btn" data-dismiss="modal">Close</a>
-        <a href="#" class="btn btn-primary">Save changes</a>
-    </div>
-</div>
-<div class="clearfix"></div>
+			</div><!--/row-->
+	</div><!--/.fluid-container-->
+	
+			<!-- end: Content -->
+		</div><!--/#content.span10-->
+		</div><!--/fluid-row-->
+		
+	<div class="modal hide fade" id="myModal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">×</button>
+			<h3>Settings</h3>
+		</div>
+		<div class="modal-body">
+			<p>Here settings can be configured...</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
+			<a href="#" class="btn btn-primary">Save changes</a>
+		</div>
+	</div>
+	<div class="clearfix"></div>
 
 <footer>
 
@@ -582,3 +572,5 @@
 
 </body>
 </html>
+
+

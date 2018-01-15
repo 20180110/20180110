@@ -20,6 +20,10 @@ class Driver extends Model {
         $data=$this->where($where)->paginate();
         return $data;
     }
+    public function selectList(){
+        $data=$this->select();
+        return $data;
+    }
     public function add($data){
         if(isset($data['yearcheck'])){
             $data['yearcheck']=strtotime($data['yearcheck']);
