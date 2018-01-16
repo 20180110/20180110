@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"D:\WWW\20180110\public/../application/admin\view\person\list.html";i:1515580665;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1515579356;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1515555601;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"D:\WWW\20180110\public/../application/admin\view\company\companymg.html";i:1516082408;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1516080743;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1516081591;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -328,6 +328,7 @@
         </div>
     </div>
 </div>
+
 <!-- start: Header -->
 
 <div class="container-fluid-full">
@@ -338,7 +339,7 @@
     <div class="nav-collapse sidebar-nav">
         <ul class="nav nav-tabs nav-stacked main-menu">
             <li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-tablet">主页</span></a></li>
-            <li><a href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet">企业管理</span></a></li>
+            <li><a href="<?php echo url('admin/company/companyMg'); ?>"><i class="icon-calendar"></i><span class="hidden-tablet">企业管理</span></a></li>
             <li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet">动态管控</span></a></li>
             <li><a href="table.html"><i class="icon-align-justify"></i><span class="hidden-tablet">统计分析</span></a></li>
             <li><a href="<?php echo url('admin/record/dataList'); ?>"><i class="icon-edit"></i><span class="hidden-tablet">报备录入</span></a></li>
@@ -349,69 +350,160 @@
         </ul>
     </div>
 </div>
+
         <!-- end: Main Menu -->
 
         <noscript>
             <div class="alert alert-block span10">
                 <h4 class="alert-heading">Warning!</h4>
-
-                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
-                    enabled to use this site.</p>
+                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
             </div>
         </noscript>
 
         <!-- start: Content -->
         <div id="content" class="span10">
+
+
             <ul class="breadcrumb">
                 <li>
                     <i class="icon-home"></i>
-                    <a href="index.html">主页</a>
-                </li>
-                <li>
+                    <a href="index.html">企业管理</a>
                     <i class="icon-angle-right"></i>
-                    <a href="#">人员</a>
                 </li>
-                <li>
-                    <i class="icon-angle-right"></i>
-                    <a href="#">列表</a>
-                </li>
+                <li><a href="#">图表</a></li>
             </ul>
-            <table class="table table-bordered">
-                <form class="form-horizontal" method="post" action="" target="_self">
-                    <input type="text" placeholder="输入姓名" value="" class="input-text" style="width:120px" name="name1">
 
-                    <button type="submit" class="btn btn-success" id="" name="" style="margin-left: 10px" > 搜索</button>
-                </form>
-                <div><a href="<?php echo url('add'); ?>" class="btn btn-primary">新增</a></div>
-                <thead>
-                <tr>
-                    <th>姓名</th>
-                    <th>性别</th>
-                    <th>照片路径</th>
-                    <th>身份证</th>
-                    <th>年龄</th>
-                    <th>家庭住址</th>
-                    <th>婚姻</th>
-                    <th>操作</th>
+            <div class="row-fluid">
 
-                </tr>
-                </thead>
-                <tbody>
-                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?>
-                <tr>
-                    <td><?php echo $data['name1']; ?></td>
-                    <td><?php echo $data['Gender']; ?></td>
-                    <td><img src="/uploads/<?php echo $data['imgurl']; ?>" alt="" width="100px" height="50px"></td>
-                    <td><?php echo $data['card']; ?></td>
-                    <td><?php echo $data['age']; ?></td>
-                    <td><?php echo $data['address']; ?></td>
-                    <td><?php echo $data['marry']; ?></td>
-                    <td><a href="<?php echo url('edit','id='.$data['Id']); ?>">编辑</a>|<a href="<?php echo url('del','id='.$data['Id']); ?>">删除</a></td>
-                </tr>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-                </tbody>
-            </table>
-            <div class="pagination"><?php echo $list->render(); ?></div>
+                <div class="box">
+                    <div class="box-header">
+                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>企业台档可拓展化</h2>
+                        <div class="box-icon">
+                            <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
+                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
+                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <div id="sincos"  class="center" style="height:300px;" ></div>
+                        <p id="hoverdata">Mouse position at (<span id="x">0</span>, <span id="y">0</span>). <span id="clickdata"></span></p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-header">
+                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>Flot</h2>
+                        <div class="box-icon">
+                            <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
+                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
+                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <div id="flotchart" class="center" style="height:300px"></div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-header">
+                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>企业管理网格化</h2>
+                        <div class="box-icon">
+                            <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
+                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
+                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <div id="stackchart" class="center" style="height:300px;"></div>
+
+                        <p class="stackControls center">
+                            <input class="btn" type="button" value="With stacking">
+                            <input class="btn" type="button" value="Without stacking">
+                        </p>
+
+                        <p class="graphControls center">
+                            <input class="btn-primary" type="button" value="Bars">
+                            <input class="btn-primary" type="button" value="Lines">
+                            <input class="btn-primary" type="button" value="Lines with steps">
+                        </p>
+                    </div>
+                </div>
+
+            </div><!--/row-->
+
+            <div class="row-fluid sortable">
+                <div class="box span6">
+                    <div class="box-header">
+                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>Pie</h2>
+                        <div class="box-icon">
+                            <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
+                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
+                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <div id="piechart" style="height:300px"></div>
+                    </div>
+                </div>
+
+                <div class="box span6">
+                    <div class="box-header" data-original-title>
+                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>Donut</h2>
+                        <div class="box-icon">
+                            <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
+                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
+                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <div id="donutchart" style="height: 300px;"></div>
+                    </div>
+                </div>
+
+            </div><!--/row-->
+
+            <hr>
+
+            <div class="row-fluid sortable">
+                <div class="box span12">
+                    <div class="box-header">
+                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>Realtime</h2>
+                        <div class="box-icon">
+                            <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
+                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
+                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <div id="realtimechart" style="height:190px;"></div>
+                        <p>You can update a chart periodically to get a real-time effect by using a timer to insert the new data in the plot and redraw it.</p>
+                        <p>Time between updates: <input id="updateInterval" type="text" value="" style="text-align: right; width:5em"> milliseconds</p>
+                    </div>
+                </div>
+            </div><!--/row-->
+
+            <div class="row-fluid">
+
+                <div class="widget span6" onTablet="span6" onDesktop="span6">
+                    <h2><span class="glyphicons facebook"><i></i></span>Facebook Fans</h2>
+                    <hr>
+                    <div class="content">
+                        <div id="facebookChart" style="height:300px" ></div>
+                    </div>
+                </div><!--/span-->
+
+                <div class="widget span6" onTablet="span6" onDesktop="span6">
+                    <h2><span class="glyphicons twitter"><i></i></span>Twitter Followers</h2>
+                    <hr>
+                    <div class="content">
+                        <div id="twitterChart" style="height:300px" ></div>
+                    </div>
+                </div><!--/span-->
+
+            </div>
+
+
+
         </div><!--/.fluid-container-->
 
         <!-- end: Content -->
@@ -431,6 +523,14 @@
         <a href="#" class="btn btn-primary">Save changes</a>
     </div>
 </div>
+<div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <ul class="list-inline item-details">
+            <li><a href="#">Admin templates</a></li>
+            <li><a href="http://themescloud.org">Bootstrap themes</a></li>
+        </ul>
+    </div>
+</div>
 <div class="clearfix"></div>
 
 <footer>
@@ -443,7 +543,6 @@
 </footer>
 
 <!-- start: JavaScript-->
-
 <script src="__PUBLIC__js/jquery-1.9.1.min.js"></script>
 <script src="__PUBLIC__js/jquery-migrate-1.0.0.min.js"></script>
 
@@ -502,5 +601,3 @@
 
 </body>
 </html>
-
-
