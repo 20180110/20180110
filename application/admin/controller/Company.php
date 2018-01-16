@@ -54,4 +54,9 @@ class Company extends Base
         $result=$this->model->del($id);
         $this->updateResult($result,'删除成功','dataList');
     }
+
+    /*企业管理*/
+    public function companyMg(){
+        return $this->fetch();
+    }
 }
