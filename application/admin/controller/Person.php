@@ -74,4 +74,12 @@ class Person extends Base
         $result=$this->model->del($id);
         $this->updateResult($result,'删除成功','dataList');
     }
+
+    public function widgets(){
+        return $this->fetch();
+    }
+
+    public function statistics(){
+        return $this->fetch();
+    }
 }
