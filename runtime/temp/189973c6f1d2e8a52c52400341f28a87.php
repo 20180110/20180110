@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"D:\WWW\20180110\public/../application/admin\view\person\widgets.html";i:1516082841;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1516082960;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1516081591;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:64:"D:\WWW\20180110\public/../application/admin\view\truck\list.html";i:1515578488;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1516082960;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1516081591;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -328,7 +328,6 @@
         </div>
     </div>
 </div>
-
 <!-- start: Header -->
 
 <div class="container-fluid-full">
@@ -350,160 +349,76 @@
         </ul>
     </div>
 </div>
-
         <!-- end: Main Menu -->
 
         <noscript>
             <div class="alert alert-block span10">
                 <h4 class="alert-heading">Warning!</h4>
-                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+
+                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+                    enabled to use this site.</p>
             </div>
         </noscript>
 
         <!-- start: Content -->
         <div id="content" class="span10">
-
-
             <ul class="breadcrumb">
                 <li>
                     <i class="icon-home"></i>
-                    <a href="index.html">动态管控</a>
-                    <i class="icon-angle-right"></i>
+                    <a href="index.html">主页</a>
                 </li>
-                <li><a href="#">图表</a></li>
+                <li>
+                    <i class="icon-angle-right"></i>
+                    <a href="#">车辆</a>
+                </li>
+                <li>
+                    <i class="icon-angle-right"></i>
+                    <a href="#">列表</a>
+                </li>
             </ul>
+            <table class="table table-bordered">
+                <form class="form-horizontal" method="post" action="" target="_self">
+<!--
+                    <input type="text" placeholder="输入公司名称" value="" class="input-text" style="width:120px" name="name">
+-->
+                    <select class="select" name="company" size="1" >
+                        <option value="" selected="">请选择公司</option>
+                        <?php if(is_array($company) || $company instanceof \think\Collection || $company instanceof \think\Paginator): $i = 0; $__LIST__ = $company;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                        <option value="<?php echo $vo['Id']; ?>" ><?php echo $vo['name']; ?></option>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </select>
+                    <button type="submit" class="btn btn-success" id="" name="" style="margin-left: 10px" > 搜索</button>
+                </form>
+                <div><a href="<?php echo url('add'); ?>" class="btn btn-primary">新增</a></div>
+                <thead>
+                <tr>
 
-            <div class="row-fluid">
-
-                <div class="box">
-                    <div class="box-header">
-                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>进出车辆动态显示</h2>
-                        <div class="box-icon">
-                            <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
-                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-                        </div>
-                    </div>
-                    <div class="box-content">
-                        <div id="sincos"  class="center" style="height:300px;" ></div>
-                        <p id="hoverdata">Mouse position at (<span id="x">0</span>, <span id="y">0</span>). <span id="clickdata"></span></p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="box-header">
-                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>Flot</h2>
-                        <div class="box-icon">
-                            <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
-                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-                        </div>
-                    </div>
-                    <div class="box-content">
-                        <div id="flotchart" class="center" style="height:300px"></div>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="box-header">
-                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>按车号布防查控   </h2>
-                        <div class="box-icon">
-                            <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
-                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-                        </div>
-                    </div>
-                    <div class="box-content">
-                        <div id="stackchart" class="center" style="height:300px;"></div>
-
-                        <p class="stackControls center">
-                            <input class="btn" type="button" value="With stacking">
-                            <input class="btn" type="button" value="Without stacking">
-                        </p>
-
-                        <p class="graphControls center">
-                            <input class="btn-primary" type="button" value="Bars">
-                            <input class="btn-primary" type="button" value="Lines">
-                            <input class="btn-primary" type="button" value="Lines with steps">
-                        </p>
-                    </div>
-                </div>
-
-            </div><!--/row-->
-
-            <div class="row-fluid sortable">
-                <div class="box span6">
-                    <div class="box-header">
-                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>按车号布防查控   </h2>
-                        <div class="box-icon">
-                            <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
-                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-                        </div>
-                    </div>
-                    <div class="box-content">
-                        <div id="piechart" style="height:300px"></div>
-                    </div>
-                </div>
-
-                <div class="box span6">
-                    <div class="box-header" data-original-title>
-                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>Donut</h2>
-                        <div class="box-icon">
-                            <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
-                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-                        </div>
-                    </div>
-                    <div class="box-content">
-                        <div id="donutchart" style="height: 300px;"></div>
-                    </div>
-                </div>
-
-            </div><!--/row-->
-
-            <hr>
-
-            <div class="row-fluid sortable">
-                <div class="box span12">
-                    <div class="box-header">
-                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>Realtime</h2>
-                        <div class="box-icon">
-                            <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
-                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-                        </div>
-                    </div>
-                    <div class="box-content">
-                        <div id="realtimechart" style="height:190px;"></div>
-                        <p>You can update a chart periodically to get a real-time effect by using a timer to insert the new data in the plot and redraw it.</p>
-                        <p>Time between updates: <input id="updateInterval" type="text" value="" style="text-align: right; width:5em"> milliseconds</p>
-                    </div>
-                </div>
-            </div><!--/row-->
-
-            <div class="row-fluid">
-
-                <div class="widget span6" onTablet="span6" onDesktop="span6">
-                    <h2><span class="glyphicons facebook"><i></i></span>Facebook Fans</h2>
-                    <hr>
-                    <div class="content">
-                        <div id="facebookChart" style="height:300px" ></div>
-                    </div>
-                </div><!--/span-->
-
-                <div class="widget span6" onTablet="span6" onDesktop="span6">
-                    <h2><span class="glyphicons twitter"><i></i></span>Twitter Followers</h2>
-                    <hr>
-                    <div class="content">
-                        <div id="twitterChart" style="height:300px" ></div>
-                    </div>
-                </div><!--/span-->
-
-            </div>
-
-
-
+                    <th>所属企业</th>
+                    <th>所属挂车</th>
+                    <th>车身颜色</th>
+                    <th>照片路径</th>
+                    <th>车辆年检时间</th>
+                    <th>车辆保险</th>
+                    <th>车辆轨迹</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?>
+                <tr>
+                    <td><?php echo getCompanyName($data['company']); ?></td>
+                    <td><?php echo $data['truck']; ?></td>
+                    <td><?php echo $data['truckcolour']; ?></td>
+                    <td><img src="/uploads/<?php echo $data['imgurl']; ?>" alt="" width="100px" height="50px"></td>
+                    <td><?php echo date('Y-m-d',$data['yearcheck']); ?></td>
+                    <td><?php echo $data['Insurance']; ?></td>
+                    <td><?php echo $data['Route']; ?></td>
+                    <td><a href="<?php echo url('edit','id='.$data['Id']); ?>">编辑</a>|<a href="<?php echo url('del','id='.$data['Id']); ?>">删除</a></td>
+                </tr>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+                </tbody>
+            </table>
+            <div class="pagination"><?php echo $list->render(); ?></div>
         </div><!--/.fluid-container-->
 
         <!-- end: Content -->
@@ -521,14 +436,6 @@
     <div class="modal-footer">
         <a href="#" class="btn" data-dismiss="modal">Close</a>
         <a href="#" class="btn btn-primary">Save changes</a>
-    </div>
-</div>
-<div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <ul class="list-inline item-details">
-            <li><a href="#">Admin templates</a></li>
-            <li><a href="http://themescloud.org">Bootstrap themes</a></li>
-        </ul>
     </div>
 </div>
 <div class="clearfix"></div>
@@ -601,3 +508,5 @@
 
 </body>
 </html>
+
+

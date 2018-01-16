@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"D:\WWW\20180110\public/../application/admin\view\person\list.html";i:1515580665;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1516080743;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1516081591;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"D:\WWW\20180110\public/../application/admin\view\person\list.html";i:1515580665;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1516082960;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1516081591;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -339,8 +339,8 @@
         <ul class="nav nav-tabs nav-stacked main-menu">
             <li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-tablet">主页</span></a></li>
             <li><a href="<?php echo url('admin/company/companyMg'); ?>"><i class="icon-calendar"></i><span class="hidden-tablet">企业管理</span></a></li>
-            <li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet">动态管控</span></a></li>
-            <li><a href="table.html"><i class="icon-align-justify"></i><span class="hidden-tablet">统计分析</span></a></li>
+            <li><a href="<?php echo url('admin/person/widgets'); ?>"><i class="icon-dashboard"></i><span class="hidden-tablet">动态管控</span></a></li>
+            <li><a href="<?php echo url('admin/person/statistics'); ?>"><i class="icon-align-justify"></i><span class="hidden-tablet">统计分析</span></a></li>
             <li><a href="<?php echo url('admin/record/dataList'); ?>"><i class="icon-edit"></i><span class="hidden-tablet">报备录入</span></a></li>
             <li><a href="<?php echo url('admin/company/dataList'); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet">企业录入</span></a></li>
             <li><a href="<?php echo url('admin/truck/dataList'); ?>"><i class="icon-tasks"></i><span class="hidden-tablet">车辆录入</span></a></li>

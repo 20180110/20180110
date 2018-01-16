@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"D:\WWW\20180110\public/../application/admin\view\person\widgets.html";i:1516082841;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1516082960;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1516081591;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"D:\WWW\20180110\public/../application/admin\view\person\statistics.html";i:1516083043;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1516082960;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1516081591;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -367,7 +367,7 @@
             <ul class="breadcrumb">
                 <li>
                     <i class="icon-home"></i>
-                    <a href="index.html">动态管控</a>
+                    <a href="index.html">统计分析</a>
                     <i class="icon-angle-right"></i>
                 </li>
                 <li><a href="#">图表</a></li>
@@ -377,7 +377,7 @@
 
                 <div class="box">
                     <div class="box-header">
-                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>进出车辆动态显示</h2>
+                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>数据可视化展示 </h2>
                         <div class="box-icon">
                             <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
                             <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
@@ -392,7 +392,7 @@
 
                 <div class="box">
                     <div class="box-header">
-                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>Flot</h2>
+                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>各监测点位通行数量 </h2>
                         <div class="box-icon">
                             <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
                             <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
@@ -406,7 +406,7 @@
 
                 <div class="box">
                     <div class="box-header">
-                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>按车号布防查控   </h2>
+                        <h2><i class="halflings-icon white list-alt"></i><span class="break"></span>多点位对比统计图表    </h2>
                         <div class="box-icon">
                             <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
                             <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
