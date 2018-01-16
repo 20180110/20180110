@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"D:\WWW\20180110\public/../application/admin\view\record\list.html";i:1515578474;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1516083802;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1516081591;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:64:"D:\WWW\20180110\public/../application/admin\view\record\add.html";i:1515577768;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1516083802;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1516081591;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -354,69 +354,135 @@
         <noscript>
             <div class="alert alert-block span10">
                 <h4 class="alert-heading">Warning!</h4>
-
-                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
-                    enabled to use this site.</p>
+                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
             </div>
         </noscript>
 
         <!-- start: Content -->
         <div id="content" class="span10">
+
+
             <ul class="breadcrumb">
                 <li>
                     <i class="icon-home"></i>
                     <a href="index.html">主页</a>
+                    <i class="icon-angle-right"></i>
                 </li>
                 <li>
-                    <i class="icon-angle-right"></i>
-                    <a href="#">报备</a>
-                </li>
-                <li>
-                    <i class="icon-angle-right"></i>
-                    <a href="#">列表</a>
+                    <i class="icon-edit"></i>
+                    <a href="#">报备录入</a>
                 </li>
             </ul>
-            <table class="table table-bordered">
-                <form class="form-horizontal" method="post" action="" target="_self">
-                    <input type="text" placeholder="输入车牌" value="" class="input-text" style="width:120px" name="truckID">
 
-                    <select class="select" name="company" size="1" >
-                        <option value="" selected="">请选择公司</option>
-                        <?php if(is_array($company) || $company instanceof \think\Collection || $company instanceof \think\Paginator): $i = 0; $__LIST__ = $company;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                        <option value="<?php echo $vo['Id']; ?>" ><?php echo $vo['name']; ?></option>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </select>
-                    <button type="submit" class="btn btn-success" id="" name="" style="margin-left: 10px" > 搜索</button>
-                </form>
-                <div><a href="<?php echo url('admin/record/add'); ?>" class="btn btn-primary">新增</a></div>
-                <thead>
-                <tr>
-                    <th>车牌</th>
-                    <th>所属货物属性</th>
-                    <th>所属介质名称</th>
-                    <th>通行方式</th>
-                    <th>通行路线</th>
-                    <th>报备开始时间</th>
-                    <th>联系电话</th>
-                    <th>操作</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?>
-                <tr>
-                    <td><?php echo $data['truckID']; ?></td>
-                    <td><?php echo $data['goodskind']; ?></td>
-                    <td><?php echo $data['Medium']; ?></td>
-                    <td><?php echo $data['Throughmode']; ?></td>
-                    <td><?php echo $data['Route']; ?></td>
-                    <td><?php echo date("Y-m-d",$data['startdate']); ?></td>
-                    <td><?php echo $data['contact']; ?></td>
-                    <td><a href="<?php echo url('edit','id='.$data['Id']); ?>">编辑</a>|<a href="<?php echo url('del','id='.$data['Id']); ?>">删除</a></td>
-                </tr>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-                </tbody>
-            </table>
-            <div class="pagination"><?php echo $list->render(); ?></div>
+            <div class="row-fluid sortable">
+                <div class="box span12">
+                    <div class="box-header" data-original-title>
+                        <h2><i class="halflings-icon white edit"></i><span class="break"></span>报备信息录入 </h2>
+                        <div class="box-icon">
+                            <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
+                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
+                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <form class="form-horizontal" method="post">
+                            <fieldset>
+                                <div class="control-group">
+                                    <label class="control-label" for="typeahead">车牌</label>
+                                    <div class="controls">
+                                        <p class="help-block">可以根据报备历史信息，提示下拉列表选择输入。</p>
+                                        <input type="text" class="span6 typeahead" id="typeahead"  data-provide="typeahead" data-items="4" name="truckID">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="typeahead">所属货物属性</label>
+                                    <div class="controls">
+                                        <input type="text" class="span6 typeahead" id="typeahead"  data-provide="typeahead" data-items="4" name="goodskind">
+
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="typeahead">所属介质名称</label>
+                                    <div class="controls">
+                                        <input type="text" class="span6 typeahead" id="typeahead"  data-provide="typeahead" data-items="4" name="Medium">
+
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="typeahead">通行方式</label>
+                                    <div class="controls">
+                                        <input type="text" class="span6 typeahead" id="typeahead"  data-provide="typeahead" data-items="4" name="Throughmode">
+
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="date01">报备开始时间</label>
+                                    <div class="controls">
+                                        <input name="startdate" type="text" class="input-xlarge datepicker" id="date01" value="">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="typeahead">通行路线</label>
+                                    <div class="controls">
+                                        <input name="Route" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" >
+
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="typeahead">联系电话</label>
+                                    <div class="controls">
+                                        <input name="contact" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" data-source=''>
+
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="typeahead">驾驶员</label>
+                                    <div class="controls">
+                                        <select class="select" name="Driver" size="1" >
+                                            <option value="" selected="">请选择驾驶员</option>
+                                            <?php if(is_array($driver) || $driver instanceof \think\Collection || $driver instanceof \think\Paginator): $i = 0; $__LIST__ = $driver;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                                            <option value="<?php echo $vo['Id']; ?>" ><?php echo $vo['name1']; ?></option>
+                                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="typeahead">押运员</label>
+                                    <div class="controls">
+                                        <input name="Escort" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" data-source=''>
+
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="typeahead">所属地域</label>
+                                    <div class="controls">
+                                        <input name="area" type="text" class="span6 typeahead" id="text"  data-provide="typeahead" data-items="4" data-source=''>
+
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="typeahead">所属企业</label>
+                                    <div class="controls">
+                                        <select class="select" name="company" size="1" >
+                                            <option value="" selected="">请选择公司</option>
+                                            <?php if(is_array($company) || $company instanceof \think\Collection || $company instanceof \think\Paginator): $i = 0; $__LIST__ = $company;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                                            <option value="<?php echo $vo['Id']; ?>" ><?php echo $vo['name']; ?></option>
+                                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">保存</button>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button type="reset" class="btn">取消</button>
+                                </div>
+                            </fieldset>
+                        </form>
+
+                    </div>
+                </div><!--/span-->
+
+            </div><!--/row-->
         </div><!--/.fluid-container-->
 
         <!-- end: Content -->
@@ -506,5 +572,3 @@
 
 </body>
 </html>
-
-

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:66:"D:\WWW\20180110\public/../application/admin\view\company\list.html";i:1515576046;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1516082960;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1516081591;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:66:"D:\WWW\20180110\public/../application/admin\view\company\list.html";i:1515576046;s:67:"D:\WWW\20180110\public/../application/admin\view\public\header.html";i:1515568287;s:65:"D:\WWW\20180110\public/../application/admin\view\public\menu.html";i:1516083802;s:65:"D:\WWW\20180110\public/../application/admin\view\public\foot.html";i:1516081591;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -337,7 +337,7 @@
         <div id="sidebar-left" class="span2">
     <div class="nav-collapse sidebar-nav">
         <ul class="nav nav-tabs nav-stacked main-menu">
-            <li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-tablet">主页</span></a></li>
+            <li><a href="<?php echo url('admin/record/dataList'); ?>"><i class="icon-bar-chart"></i><span class="hidden-tablet">主页</span></a></li>
             <li><a href="<?php echo url('admin/company/companyMg'); ?>"><i class="icon-calendar"></i><span class="hidden-tablet">企业管理</span></a></li>
             <li><a href="<?php echo url('admin/person/widgets'); ?>"><i class="icon-dashboard"></i><span class="hidden-tablet">动态管控</span></a></li>
             <li><a href="<?php echo url('admin/person/statistics'); ?>"><i class="icon-align-justify"></i><span class="hidden-tablet">统计分析</span></a></li>
